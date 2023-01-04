@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <title>Filter App</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="container__img">
+      <div id="imgBox" class="imgBox"></div>
+    </div>
+    <div class="ajustes">
+      <div class="nav" id="nav">
+        <div class="nav__btn">
+          <a href="#color" id="colorBtn">
+            <span><i class="fa-solid fa-palette"></i></span>
+            <span>Color</span>
+          </a>
+        </div>
+        <div class="nav__btn">
+          <a href="#saturate" id="saturateBtn">
+            <span><i class="fa-solid fa-sun"></i></span>
+            <span>Saturation</span>
+          </a>
+        </div>
+        <div class="nav__btn">
+          <a href="#blur" id="blurBtn">
+            <span><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+            <span>Blur</span>
+          </a>
+        </div>
+        <div class="nav__btn">
+          <a href="#gradient" id="gradientBtn">
+            <span><i class="fa-solid fa-circle-half-stroke"></i></span>
+            <span>Gradient</span>
+          </a>
+        </div>
+      </div>
+      <div class="layouts">
+        
+        <!--COLOR INPUTS-->
+        <div id="color" class="inputGroup">
+          <div class="inputBox">
+            <div class="info">
+              <label for="hue">Hue</label>
+              <span id="hueValue">0 deg</span>
+            </div>
+            <input id="inputHue" class="range" type="range" value="0" min="0" max="360" oninput="hueFunction(this.value)">
+          </div>
+          <div class="inputBox">
+            <div class="info">
+              <label for="sepia">Sepia</label>
+              <span id="sepiaValue">0%</span>
+            </div>
+            <input id="inputSepia" class="range" type="range" value="0" min="0" max="100"
+            oninput="sepiaFunction(this.value)">
+          </div>
+          <div class="inputBox">
+            <div class="info">
+              <label for="invert">invert</label>
+              <span id="invValue">0%</span>
+            </div>
+            <input id="inputInvert" class="range" type="range" value="0" min="0" max="100"
+            oninput="invertFunction(this.value)">
+          </div>
+        </div>
+        
+        <!--SATURATE INPUTS-->
+        <div id="saturate" class="inputGroup">
+          <div class="inputBox">
+            <div class="info">
+              <label for="saturate">Saturate</label>
+              <span id="satValue">100%</span>
+            </div>
+            <input id="inputSaturate" class="range" type="range" value="100" min="0" max="500" oninput="satFunction(this.value)">
+          </div>
+          <div class="inputBox">
+            <div class="info">
+              <label for="contrast">Contrast</label>
+              <span id="contValue">100%</span>
+            </div>
+            <input id="inputContrast" class="range" type="range" value="100" min="0" max="500" oninput="contFunction(this.value)">
+          </div>
+          <div class="inputBox">
+            <div class="info">
+              <label for="opacity">Opacity</label>
+              <span id="opValue">100%</span>
+            </div>
+            <input id="opInvert" class="range" type="range" value="100" min="0" max="100" 
+            oninput="opFunction(this.value)">
+          </div>
+        </div>
+        
+        <!--BLUR INPUTS-->
+        <div id="blur" class="inputGroup">
+          <div class="inputBox">
+            <div class="info">
+              <label for="blur">Blur</label>
+              <span id="blurValue">0px</span>
+            </div>
+            <input id="inputBlur" class="range" type="range" value="0" min="0" max="50" oninput="blurFunction(this.value)">
+          </div>
+          <div class="inputBox">
+            <div class="info">
+              <label for="bright">Brightness</label>
+              <span id="brightValue">100%</span>
+            </div>
+            <input id="inputBright" class="range" type="range" value="100" min="0" max="500" oninput="brightFunction(this.value)">
+          </div>
+          <div class="inputBox">
+            <div class="info">
+              <label for="gray">GrayScale</label>
+              <span id="grayValue">0%</span>
+            </div>
+            <input id="inputGray" class="range" type="range" value="0" min="0" max="100" oninput="grayFunction(this.value)">
+          </div>
+        </div>
+        
+        <!--GRADIENT INPUTS-->
+        <div id="gradient" class="inputGroup">
+          <div class="inputBox">
+            <div class="slctGrad">
+              <span>
+                <p>Linear</p>
+                <i class="fa-regular fa-circle-notch"></i>
+              </span>
+              <span>
+                <i class="fa-solid fa-circle-notch"></i>
+                <p>Radial</p>
+              </span>
+            </div>
+          </div>
+          <div class="comingSoon">
+            <h3>COMING SOON🏖️</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+
+<script src="/main.js"></script>
+</body>
+
+</html>
