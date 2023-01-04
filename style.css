@@ -1,0 +1,223 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  letter-spacing: -1px;
+  text-decoration: none;
+}
+
+a{
+  
+}
+:root{
+  --color-primary: #24213E;
+  --color-secundary: #44C201; 
+  --color-third: #121317;
+  --color-light: #25262B;
+  --color-dark: #2C3034;
+  --pointer: none;
+  --opacity: 0;
+}
+
+.container{
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: var(--color-primary);
+}
+
+.container__img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  max-height: 600px;
+  width: 100%;
+  max-width: 400px;
+  
+  padding: 25px;
+}
+
+.container__img .imgBox{
+  min-height: 300px;
+  min-width: 300px;
+  background: url(/img1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 3px solid #fff;
+}
+
+.ajustes{
+  height: 50%;
+  width: 100%;
+  max-height: 600px;
+  max-width: 450px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  border: 1px solid var(--color-light);
+  background: #000;
+}
+
+.ajustes .nav{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 100px;
+  width: 100%;
+  padding: 10px 10px;
+}
+
+.ajustes .nav .nav__btn{
+  height: 100%;
+  width: 80px;
+  margin: auto;
+  background: var(--color-third);
+  border-radius: 8px;
+  border: 1px solid var(--color-light);
+  overflow: hidden;
+}
+
+.ajustes .nav .nav__btn a.active{
+  background: var(--color-secundary);
+  color: #fff;
+}
+
+.ajustes .nav .nav__btn a{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  height: 100%;
+  padding-bottom: 10px;
+  color: var(--color-secundary);
+}
+
+
+
+.ajustes .nav .nav__btn a span:nth-child(1){
+  font-size: 20px;
+}
+
+.ajustes .layouts{
+  position: relative;
+  height: calc(100% - 100px);
+  width: 100%;
+  overflow: hidden;
+}
+
+.ajustes .layouts .inputGroup{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 15px;
+  opacity: var(--opacity);
+  pointer-events: var(--pointer);
+  transition: opacity 0.5s;
+  background: #000;
+}
+
+.inputGroup:target{
+  --opacity: 1;
+  --pointer: auto;
+  transition: opacity 2s;
+}
+
+.ajustes .layouts .inputGroup .inputBox{
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.ajustes .layouts .inputGroup .inputBox .info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.ajustes .layouts .inputGroup .inputBox .info label{
+  color: #fff;
+}
+
+.ajustes .layouts .inputGroup .inputBox .info span{
+  color: #F3C601;
+}
+
+.ajustes .layouts .inputGroup .inputBox .range{
+  width: 100%;
+  height: 10px;
+  -webkit-appearance: none;
+  border-radius: 15px;
+  outline: none;
+  box-shadow: inset 0 0 5px rgba(0,0,0,1);
+  background: #060024;
+  overflow: hidden;
+}
+
+.range::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #44C201;
+  cursor: pointer;
+  box-shadow: -407px 0 0 400px var(--color-secundary);
+}
+
+.inputGroup .inputBox .slctGrad{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: 60px;
+  width: 100%;
+}
+
+
+.inputGroup .inputBox .slctGrad span{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  gap: 15px;
+  color: var(--color-secundary);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 1);
+  background: #060024;
+  border: 1px solid var(--color-light);
+  border-radius: 8px;
+}
+
+.inputGroup .imgBox .slctGrad span i{
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  padding: 10px;
+  background: teal;
+  font-family: fontAwesome;
+  border: 2px solid var(--color-light);
+  border-radius: 4px;
+}
+
+.inputGroup .comingSoon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  min-height: 100px;
+}
+
+.inputGroup .comingSoon h3{
+  color: #fff;
+  font-size: 36px;
+}
+
+
+@media (min-width: 700px){
+  .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
